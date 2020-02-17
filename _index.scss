@@ -1,0 +1,65 @@
+$article-color : #86BBD8;
+@mixin article-dimensions {
+    height:40vh;
+    width: 100%;
+    background-color: $article-color;
+
+}
+main{
+    width:75vw;
+    max-width: 1500px;
+    margin:auto;
+
+    .first-content{
+        display:flex;
+        flex-wrap: wrap;
+        border-bottom: 1px solid gray;
+        padding-bottom: 4rem;
+    
+        article{
+            width: 45vw;
+            padding:1rem;
+            .first-article{
+                @include article-dimensions;
+                
+            }
+            
+        }
+        aside{
+            min-width: 14ch;
+            .author-section{
+                display:flex;
+                
+                // h2{
+                //     margin-top:0;
+                // }
+                
+            }
+            .author{
+                height:100px;
+                width:150px;
+                background-color: $article-color;
+                margin:1rem .5rem;
+            }
+        }
+        
+    }
+    .second-article{
+        margin-top: 5rem;
+        @include article-dimensions;
+    }
+}
+
+@media screen and(orientation:portrait)
+{
+    main{
+        width:90vw;
+        
+        .first-content{
+            article{
+                width:100%;
+            }
+        }
+
+    }
+}
