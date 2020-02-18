@@ -1,0 +1,11 @@
+$article-color : #86BBD8;
+@mixin article-dimensions {
+    height:40vh;
+    width: 100%;
+    background-color: $article-color;
+
+}
+.article-page{
+    margin-top: 0rem;
+    @include article-dimensions;
+}
